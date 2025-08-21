@@ -37,29 +37,6 @@ projeto-paroquia/
     └── projetos.html
 ```
 
-## 🛠️ Como Executar
-
-1. **Clone ou baixe o repositório**
-   ```bash
-   git clone [url-do-repositorio]
-   ```
-
-2. **Navegue até a pasta do projeto**
-   ```bash
-   cd projeto-paroquia
-   ```
-
-3. **Abra o arquivo principal**
-   - Abra `idex.html` em qualquer navegador web
-   - Ou use um servidor local (recomendado):
-   ```bash
-   # Com Python
-   python -m http.server 8000
-   
-   # Com Node.js (http-server)
-   npx http-server
-   ```
-
 ## 🤝 Desenvolvido por 
 - [**Gustavo Kotryk**](https://github.com/GustavoKotryk)
 - [**Amanda de Moraes**]()
