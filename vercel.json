@@ -1,14 +1,4 @@
-
 {
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/$1",
-        "status": 200
-      }
-    ],
-    "functions": {},
-    "build": {
-      "env": {}
-    }
+    "cleanUrls": true,
+    "trailingSlash": false
   }
