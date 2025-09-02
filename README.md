@@ -24,7 +24,7 @@ Este é um site institucional criado para facilitar o acesso dos fiéis às info
 ```
 projeto-paroquia/
 │
-├── idex.html              # Página principal
+├── index.html              # Página principal
 ├── style.css              # Estilos principais
 ├── imgs/                  # Imagens e recursos visuais
 │   ├── home.png          # Logo/ícone home
