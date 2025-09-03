@@ -47,7 +47,13 @@ body{
 
 .main{
     background-color: var(--primary-color);
-    padding: 9rem;
+    padding: 17rem;
+}
+
+.main-historia{
+    background-image:url(imgs/img-igreja-tres.jpeg) ;
+    padding: 17rem;
+    background-position: center;
 }
 
 .img-home{
@@ -103,7 +109,6 @@ body{
     
 }
 
-/*css historia*/
 
 .titulo-pag{
     font-size: 20px;
@@ -120,21 +125,16 @@ body{
 }
 
 .img-igreja{
-    width: 200px;
+    width: 400px;
     margin-right: 3rem;
-}
-
-.img-igreja-dois{
-    width: 200px;
+    border-radius: 10px;
 }
 
 .informativo{
-line-height: 7px;
 color: var(--secundary-color);
 }
 
 
-/* parte do projetos */
 
 .pomba{
     width: 100px;
@@ -147,5 +147,37 @@ color: var(--secundary-color);
     align-items: center;
     justify-content: center;
     text-align: center;
-    
+}
+
+
+
+.img-horarios{
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.text-box{
+    padding: 2rem;
+    background-color: #CEB786;
+    border-radius: 10px;
+}
+
+.text-box-tile{
+    padding: 2rem;
+    background-color: #CEB786;
+    border-radius: 10px;
+    max-width: 20rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.projeto-img{
+    margin: 0;
+    height: 500px;
+}
+
+.main-projetos{
+    padding: 10rem;
 }
