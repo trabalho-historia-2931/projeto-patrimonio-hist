@@ -1,41 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Missas e Horários</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horários - Paróquia Nossa Senhora do Rosário</title>
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <header class="header">
-    <a href="../index.html" class="home-link">
-      <img src="../imgs/home.png" class="logo" alt="Home">
-    </a>
-    <h1 class="titulo">PÁROQUIA NOSSA SENHORA DO ROSÁRIO</h1>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8E7F42',
+            secondary: '#3A2615',
+            accent: '#C9B26D',
+            light: '#F8F5E9',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Source Sans Pro', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9b26d' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .bg-church {
+      background: linear-gradient(rgba(58, 38, 21, 0.7), rgba(58, 38, 21, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect fill="%23C9B26D" width="50" height="50" /%3E%3Crect fill="%238E7F42" x="50" width="50" height="50" /%3E%3Crect fill="%238E7F42" y="50" width="50" height="50" /%3E%3Crect fill="%23C9B26D" x="50" y="50" width="50" height="50" /%3E%3C/svg%3E');
+      background-size: cover;
+      background-position: center;
+    }
+    .schedule-item {
+      transition: all 0.3s ease;
+    }
+    .schedule-item:hover {
+      transform: translateX(5px);
+    }
+  </style>
+</head>
+<body class="bg-light font-body text-secondary flex flex-col min-h-screen">
+  
+  <header class="bg-secondary text-white py-4 px-6 shadow-md">
+    <div class="container mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center space-x-2 group">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:bg-accent transition-colors">
+          <i class="fas fa-home text-white text-xl"></i>
+        </div>
+        <span class="text-sm font-semibold hidden md:block">Página Inicial</span>
+      </a>
+      
+      <h1 class="font-heading text-xl md:text-2xl text-center text-accent">
+        PARÓQUIA NOSSA SENHORA DO ROSÁRIO
+      </h1>
+      
+      <div class="w-12 opacity-0 md:opacity-100">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+          <i class="fas fa-church text-white text-xl"></i>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="main">
-    <div class="titulo-pag">
-      <h2>MISSAS E HORÁRIOS</h2>
+
+  <main class="flex-grow">
+   
+    <div class="bg-church text-white py-16 px-4">
+      <div class="container mx-auto text-center">
+        <h2 class="font-heading text-4xl md:text-5xl mb-6">Missas e Horários</h2>
+        <p class="text-xl max-w-3xl mx-auto">Confira os horários das celebrações em nossa paróquia</p>
+      </div>
     </div>
 
-    <div class="assunto">
-      <img src="../imgs/img-igreja-dois.jpeg" class="img-igreja" alt="Igreja">
-      <div class="informativo">
-       <img src="../imgs/horarios.png" class="img-horarios">
+    
+    <div class="py-12 px-4 hero-pattern">
+      <div class="container mx-auto max-w-4xl">
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8">
+          <div class="text-center mb-8">
+            <i class="fas fa-clock text-primary text-5xl mb-4"></i>
+            <h3 class="font-heading text-2xl text-primary mb-4">Horários de Missas</h3>
+            <p class="text-gray-600">Participe das nossas celebrações</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="schedule-item flex justify-between items-center p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <div class="flex items-center">
+                <i class="fas fa-church text-primary text-xl mr-4"></i>
+                <span class="font-semibold">Terça-feira</span>
+              </div>
+              <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">19h</span>
+            </div>
+            
+            <div class="schedule-item flex justify-between items-center p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <div class="flex items-center">
+                <i class="fas fa-church text-primary text-xl mr-4"></i>
+                <span class="font-semibold">Quarta-feira</span>
+              </div>
+              <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">15h</span>
+            </div>
+            
+            <div class="schedule-item flex justify-between items-center p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <div class="flex items-center">
+                <i class="fas fa-church text-primary text-xl mr-4"></i>
+                <span class="font-semibold">Quinta-feira</span>
+              </div>
+              <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">19h</span>
+            </div>
+            
+            <div class="schedule-item flex justify-between items-center p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <div class="flex items-center">
+                <i class="fas fa-church text-primary text-xl mr-4"></i>
+                <span class="font-semibold">Sexta-feira</span>
+              </div>
+              <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">19h</span>
+            </div>
+            
+            <div class="schedule-item flex justify-between items-center p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <div class="flex items-center">
+                <i class="fas fa-church text-primary text-xl mr-4"></i>
+                <span class="font-semibold">Sábado</span>
+              </div>
+              <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">19h</span>
+            </div>
+            
+            <div class="schedule-item flex justify-between items-center p-4 bg-primary bg-opacity-5 rounded-lg border-l-4 border-primary">
+              <div class="flex items-center">
+                <i class="fas fa-church text-primary text-xl mr-4"></i>
+                <span class="font-semibold">Domingo</span>
+              </div>
+              <div class="flex space-x-2">
+                <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">9h30</span>
+                <span class="bg-primary text-white py-1 px-3 rounded-full text-sm">19h</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-accent rounded-lg shadow-md p-8 text-white">
+          <div class="text-center mb-6">
+            <i class="fas fa-baptism text-white text-5xl mb-4"></i>
+            <h3 class="font-heading text-2xl mb-4">Batizados</h3>
+          </div>
+          
+          <div class="text-center">
+            <p class="text-xl mb-2">3º Domingo do Mês</p>
+            <p class="text-lg">Batizados na missa das 19h</p>
+          </div>
+          
+          <div class="mt-6 bg-white bg-opacity-20 p-4 rounded-lg">
+            <p class="text-center"><i class="fas fa-info-circle mr-2"></i>Entre em contato para mais informações sobre batizados</p>
+          </div>
+        </div>
+        
+        <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+          <div class="text-center">
+            <h3 class="font-heading text-xl text-primary mb-4">Informações Adicionais</h3>
+            <p class="text-gray-600 mb-4">Para celebrações especiais, novenas e outros eventos, consulte nossa programação semanal.</p>
+            <a href="#" class="inline-flex items-center text-primary font-semibold">
+              <i class="fas fa-calendar-alt mr-2"></i>
+              Ver calendário completo
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="grid-paginas">
-      <a href="../html/historia.html" class="paginas">NOSSA HISTÓRIA</a>
-      <a href="../html/horarios.html" class="paginas">HORÁRIOS</a>
-      <a href="../html/projetos.html" class="paginas">PROJETOS</a>
-      <div class="contato">Telefone: (47) 92776-4002</div>
+  
+  <footer class="bg-secondary text-white py-8 px-4">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <h3 class="font-heading text-xl text-accent mb-2">Paróquia Nossa Senhora do Rosário</h3>
+          <p class="text-sm">Uma comunidade de fé e amor</p>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-end">
+          <div class="mb-4">
+            <p class="text-accent font-semibold">
+              <i class="fas fa-phone-alt mr-2"></i>Telefone: (47) 92776-4002
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="historia.html" class="text-white hover:text-accent transition-colors">
+              Nossa História
+            </a>
+            <a href="horarios.html" class="text-white hover:text-accent transition-colors font-semibold">
+              Horários
+            </a>
+            <a href="projetos.html" class="text-white hover:text-accent transition-colors">
+              Projetos
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+        <p>© 2023 Paróquia Nossa Senhora do Rosário. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
-
 </body>
 </html>

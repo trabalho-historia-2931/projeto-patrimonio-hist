@@ -1,43 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nossa História</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa História - Paróquia Nossa Senhora do Rosário</title>
 
-  <header class="header">
-    <a href="../index.html" class="home-link">
-      <img src="../imgs/home.png" class="logo" alt="Home">
-    </a>
-    <h1 class="titulo">PÁROQUIA NOSSA SENHORA DO ROSÁRIO</h1>
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8E7F42',
+            secondary: '#3A2615',
+            accent: '#C9B26D',
+            light: '#F8F5E9',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Source Sans Pro', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9b26d' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .bg-church {
+      background: linear-gradient(rgba(58, 38, 21, 0.7), rgba(58, 38, 21, 0.7)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect fill="%23C9B26D" width="50" height="50" /%3E%3Crect fill="%238E7F42" x="50" width="50" height="50" /%3E%3Crect fill="%238E7F42" y="50" width="50" height="50" /%3E%3Crect fill="%23C9B26D" x="50" y="50" width="50" height="50" /%3E%3C/svg%3E');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="bg-light font-body text-secondary flex flex-col min-h-screen">
+  <header class="bg-secondary text-white py-4 px-6 shadow-md">
+    <div class="container mx-auto flex items-center justify-between">
+      <a href="../index.html" class="flex items-center space-x-2 group">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:bg-accent transition-colors">
+          <i class="fas fa-home text-white text-xl"></i>
+        </div>
+        <span class="text-sm font-semibold hidden md:block">Página Inicial</span>
+      </a>
+      
+      <h1 class="font-heading text-xl md:text-2xl text-center text-accent">
+        PARÓQUIA NOSSA SENHORA DO ROSÁRIO
+      </h1>
+      
+      <div class="w-12 opacity-0 md:opacity-100">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+          <i class="fas fa-church text-white text-xl"></i>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="main-historia">
-    <div class="titulo-pag text-box-tile">
-      <h2>NOSSA HISTÓRIA</h2>
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <div class="bg-church text-white py-16 px-4">
+      <div class="container mx-auto text-center">
+        <h2 class="font-heading text-4xl md:text-5xl mb-6">Nossa História</h2>
+        <p class="text-xl max-w-3xl mx-auto">Conheça a trajetória da nossa paróquia desde sua fundação</p>
+      </div>
     </div>
 
-    <div class="assunto-projetos">
-      <img src="../imgs/pomba.png" class="pomba" alt="Pomba">
-      <div class="informativo-projetos text-box">
-        <p>
-            Os primeiros colonizadores edificaram, no alto de um morro, uma capelinha de madeira, dedicada à Nossa Senhora do Rosário. O atendimento pastoral era realizado por sacerdotes franciscanos, que vinham regularmente da Paróquia São Francisco de Assis, de Rodeio. Posteriormente, a assistência passou para os sacerdotes diocesanos (então Diocese de Florianópolis), da Paróquia São Francisco Xavier, de Joinville. E, a partir de 1911, permanecendo até a atualidade, aos Padres do Sagrado Coração de Jesus (Dehonianos), inicialmente da Paróquia Santa Emília (mais tarde São Sebastião), de Jaraguá.
-        </p>
+    
+    <div class="py-12 px-4 hero-pattern">
+      <div class="container mx-auto max-w-4xl bg-white rounded-lg shadow-md p-8">
+        <div class="text-center mb-8">
+          <i class="fas fa-dove text-primary text-5xl mb-4"></i>
+          <h3 class="font-heading text-2xl text-primary mb-4">Nossa Origem</h3>
+        </div>
+        
+        <div class="prose prose-lg max-w-none text-gray-700">
+          <p class="mb-6">
+            Os primeiros colonizadores edificaram, no alto de um morro, uma capelinha de madeira, dedicada à Nossa Senhora do Rosário. O atendimento pastoral era realizado por sacerdotes franciscanos, que vinham regularmente da Paróquia São Francisco de Assis, de Rodeio.
+          </p>
+          
+          <p class="mb-6">
+            Posteriormente, a assistência passou para os sacerdotes diocesanos (então Diocese de Florianópolis), da Paróquia São Francisco Xavier, de Joinville. E, a partir de 1911, permanecendo até a atualidade, aos Padres do Sagrado Coração de Jesus (Dehonianos), inicialmente da Paróquia Santa Emília (mais tarde São Sebastião), de Jaraguá.
+          </p>
+          
+          <div class="bg-accent bg-opacity-10 p-6 rounded-lg border-l-4 border-primary my-8">
+            <p class="italic text-primary font-semibold">
+              "A fé é o fundamento da esperança, é uma certeza a respeito do que não se vê."
+            </p>
+            <p class="text-right mt-2 text-sm">- Hebreus 11:1</p>
+          </div>
+          
+          <p class="mb-6">
+            Ao longo dos anos, nossa paróquia cresceu e se fortaleceu como um centro de fé e comunidade. Muitas gerações passaram por nossas portas, celebrando momentos de alegria, superando desafios e fortalecendo sua fé.
+          </p>
+          
+          <p>
+            Hoje, continuamos a escrever nossa história, mantendo viva a chama da fé que iluminou nossos fundadores e guia nossa comunidade rumo ao futuro.
+          </p>
+        </div>
+        
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-primary bg-opacity-10 p-4 rounded-lg text-center">
+            <i class="fas fa-calendar-day text-primary text-3xl mb-3"></i>
+            <h4 class="font-heading text-primary mb-2">Fundação</h4>
+            <p class="text-sm">Capelinha original construída pelos primeiros colonizadores</p>
+          </div>
+          
+          <div class="bg-primary bg-opacity-10 p-4 rounded-lg text-center">
+            <i class="fas fa-hands-praying text-primary text-3xl mb-3"></i>
+            <h4 class="font-heading text-primary mb-2">Sacerdotes</h4>
+            <p class="text-sm">Atendimento inicial por sacerdotes franciscanos</p>
+          </div>
+          
+          <div class="bg-primary bg-opacity-10 p-4 rounded-lg text-center">
+            <i class="fas fa-church text-primary text-3xl mb-3"></i>
+            <h4 class="font-heading text-primary mb-2">Atualidade</h4>
+            <p class="text-sm">Padres do Sagrado Coração de Jesus desde 1911</p>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="grid-paginas">
-      <a href="../html/historia.html" class="paginas">NOSSA HISTÓRIA</a>
-      <a href="../html/horarios.html" class="paginas">HORÁRIOS</a>
-      <a href="../html/projetos.html" class="paginas">PROJETOS</a>
-      <div class="contato">Telefone: (47) 92776-4002</div>
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-8 px-4">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <h3 class="font-heading text-xl text-accent mb-2">Paróquia Nossa Senhora do Rosário</h3>
+          <p class="text-sm">Uma comunidade de fé e amor</p>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-end">
+          <div class="mb-4">
+            <p class="text-accent font-semibold">
+              <i class="fas fa-phone-alt mr-2"></i>Telefone: (47) 92776-4002
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <a href="historia.html" class="text-white hover:text-accent transition-colors font-semibold">
+              Nossa História
+            </a>
+            <a href="horarios.html" class="text-white hover:text-accent transition-colors">
+              Horários
+            </a>
+            <a href="projetos.html" class="text-white hover:text-accent transition-colors">
+              Projetos
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+        <p>© 2023 Paróquia Nossa Senhora do Rosário. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
-
 </body>
 </html>

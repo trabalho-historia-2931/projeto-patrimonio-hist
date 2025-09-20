@@ -3,48 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Paróquia Nossa Senhora do Rosário</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8E7F42',
+            secondary: '#3A2615',
+            accent: '#C9B26D',
+            light: '#F8F5E9',
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Source Sans Pro', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9b26d' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
-<body>
-  <header class="header">
-    <a href="index.html" class="home-link">
-      <img src="imgs/home.png" class="logo" alt="Home" />
-    </a>
-    <h1 class="titulo">PÁROQUIA NOSSA SENHORA DO ROSÁRIO</h1>
+<body class="bg-light font-body text-secondary flex flex-col min-h-screen">
+ 
+  <header class="bg-secondary text-white py-4 px-6 shadow-md">
+    <div class="container mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-2 group">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center group-hover:bg-accent transition-colors">
+          <i class="fas fa-home text-white text-xl"></i>
+        </div>
+        <span class="text-sm font-semibold hidden md:block">Página Inicial</span>
+      </a>
+      
+      <h1 class="font-heading text-xl md:text-2xl text-center text-accent">
+        PARÓQUIA NOSSA SENHORA DO ROSÁRIO
+      </h1>
+      
+      <div class="w-12 opacity-0 md:opacity-100">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+          <i class="fas fa-church text-white text-xl"></i>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <main class="main">
-    <div class="grid-cards">
-      <a href="html/historia.html" class="card-link">
-        <div class="card">
-          <img src="imgs/gif-livro.gif" class="img-home" alt="História" />
-          <h3 class="card-titulo">NOSSA HISTÓRIA</h3>
-        </div>
-      </a>
 
-      <a href="html/horarios.html" class="card-link">
-        <div class="card">
-          <img src="imgs/church_float.gif" class="img-home" alt="Horários" />
-          <h3 class="card-titulo">HORÁRIOS</h3>
+  <main class="flex-grow hero-pattern py-12 px-4">
+    <div class="container mx-auto">
+      <h2 class="font-heading text-3xl md:text-4xl text-center text-primary mb-12">Bem-vindo à nossa Paróquia</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <!-- História Card -->
+        <a href="html/historia.html" class="block">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+            <div class="h-40 bg-primary flex items-center justify-center">
+              <i class="fas fa-history text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl text-primary mb-2">Nossa História</h3>
+              <p class="text-gray-600 text-sm">Conheça a trajetória da nossa paróquia desde sua fundação.</p>
+            </div>
+          </div>
+        </a>
+        
+    
+        <a href="html/horarios.html" class="block">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+            <div class="h-40 bg-primary flex items-center justify-center">
+              <i class="fas fa-clock text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl text-primary mb-2">Horários</h3>
+              <p class="text-gray-600 text-sm">Confira os horários das missas e celebrações.</p>
+            </div>
+          </div>
+        </a>
+        
+ 
+        <a href="html/projetos.html" class="block">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+            <div class="h-40 bg-primary flex items-center justify-center">
+              <i class="fas fa-hands-helping text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl text-primary mb-2">Nossos Projetos</h3>
+              <p class="text-gray-600 text-sm">Descubra as iniciativas da nossa comunidade.</p>
+            </div>
+          </div>
+        </a>
+        
+   
+        <a href="html/nossa_visita.html" class="block">
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+            <div class="h-40 bg-primary flex items-center justify-center">
+              <i class="fas fa-camera text-white text-5xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="font-heading text-xl text-primary mb-2">Nossa Visita</h3>
+              <p class="text-gray-600 text-sm">Galeria de momentos especiais da nossa paróquia.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      
+      <div class="max-w-3xl mx-auto mt-16 bg-white rounded-lg shadow-md p-8">
+        <div class="text-center">
+          <i class="fas fa-quote-left text-primary text-4xl mb-4"></i>
+          <p class="text-xl italic text-gray-700 mb-4">
+            "Os primeiros colonizadores edificaram, no alto de um morro, uma capelinha de madeira, dedicada à Nossa Senhora do Rosário."
+          </p>
+          <a href="html/historia.html" class="inline-block bg-primary hover:bg-accent text-white font-semibold py-2 px-6 rounded transition-colors">
+            Conheça nossa história
+          </a>
         </div>
-      </a>
-
-      <a href="html/projetos.html" class="card-link">
-        <div class="card">
-          <img src="imgs/gif-coracao.gif" class="img-home" alt="Projetos" />
-          <h3 class="card-titulo">NOSSOS PROJETOS</h3>
-        </div>
-      </a>
+      </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="grid-paginas">
-      <a href="html/historia.html" class="paginas">NOSSA HISTÓRIA</a>
-      <a href="html/horarios.html" class="paginas">HORÁRIOS</a>
-      <a href="html/projetos.html" class="paginas">PROJETOS</a>
-      <div class="contato">Telefone: (47) 92776-4002</div>
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-8 px-4">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <h3 class="font-heading text-xl text-accent mb-2">Paróquia Nossa Senhora do Rosário</h3>
+          <p class="text-sm">Uma comunidade de fé e amor</p>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-end">
+          <div class="mb-4">
+            <p class="text-accent font-semibold">
+              <i class="fas fa-phone-alt mr-2"></i>Telefone: (47) 92776-4002
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="html/historia.html" class="text-white hover:text-accent transition-colors">
+              Nossa História
+            </a>
+            <a href="html/horarios.html" class="text-white hover:text-accent transition-colors">
+              Horários
+            </a>
+            <a href="html/projetos.html" class="text-white hover:text-accent transition-colors">
+              Projetos
+            </a>
+            <a href="html/nossa_visita.html" class="text-accent font-semibold">
+              Nossa Visita
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
+        <p>© 2023 Paróquia Nossa Senhora do Rosário. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
 </body>

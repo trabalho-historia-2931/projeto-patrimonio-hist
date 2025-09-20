@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nossos Projetos - Paróquia Nossa Senhora do Rosário</title>
-  
+  <title>Nossa Visita - Paróquia Nossa Senhora do Rosário</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     tailwind.config = {
@@ -34,24 +31,30 @@
     .hero-pattern {
       background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9b26d' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .card-hover {
+    .gallery-image {
       transition: all 0.3s ease;
+      cursor: pointer;
     }
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    .gallery-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
-    .project-icon {
-      transition: all 0.3s ease;
+    .image-container {
+      height: 250px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F8F5E9;
     }
-    .project-card:hover .project-icon {
-      transform: scale(1.1);
-      color: #8E7F42;
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body class="bg-light font-body text-secondary flex flex-col min-h-screen">
-  
   <header class="bg-secondary text-white py-4 px-6 shadow-md">
     <div class="container mx-auto flex items-center justify-between">
       <a href="../index.html" class="flex items-center space-x-2 group">
@@ -67,96 +70,88 @@
       
       <div class="w-12 opacity-0 md:opacity-100">
         <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-          <i class="fas fa-hands-helping text-white text-xl"></i>
+          <i class="fas fa-camera text-white text-xl"></i>
         </div>
       </div>
     </div>
   </header>
 
-  
+ 
   <main class="flex-grow hero-pattern py-12 px-4">
     <div class="container mx-auto">
       <div class="text-center mb-12">
-        <h2 class="font-heading text-3xl md:text-4xl text-primary mb-4">Nossos Projetos</h2>
-        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Conheça as iniciativas e projetos que mantêm viva a nossa comunidade de fé e amor.</p>
+        <h2 class="font-heading text-3xl md:text-4xl text-primary mb-4">Visita Especial ao Santuário</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      
-        <div class="bg-white rounded-lg shadow-md p-6 project-card card-hover">
-          <div class="text-center mb-4">
-            <i class="fas fa-book project-icon text-4xl text-primary mb-3"></i>
-            <h3 class="font-heading text-xl text-primary mb-2">Catequese</h3>
-          </div>
-          <p class="text-gray-600">Formação cristã para crianças, jovens e adultos, preparando para os sacramentos e para uma vida de fé.</p>
-          <div class="mt-4 text-sm text-accent font-semibold">
-            <i class="fas fa-users mr-2"></i>Encontros semanais
-          </div>
-        </div>
-
-       
-        <div class="bg-white rounded-lg shadow-md p-6 project-card card-hover">
-          <div class="text-center mb-4">
-            <i class="fas fa-pray project-icon text-4xl text-primary mb-3"></i>
-            <h3 class="font-heading text-xl text-primary mb-2">Grupo de Oração</h3>
-          </div>
-          <p class="text-gray-600">Momento de encontro com Deus através da oração, partilha e vivência da Palavra.</p>
-          <div class="mt-4 text-sm text-accent font-semibold">
-            <i class="fas fa-calendar-alt mr-2"></i>Todas as quintas-feiras
-          </div>
-        </div>
-
-       
-        <div class="bg-white rounded-lg shadow-md p-6 project-card card-hover">
-          <div class="text-center mb-4">
-            <i class="fas fa-baby project-icon text-4xl text-primary mb-3"></i>
-            <h3 class="font-heading text-xl text-primary mb-2">Pastoral da Criança</h3>
-          </div>
-          <p class="text-gray-600">Acompanhamento de gestantes e crianças, promovendo vida em abundância desde a primeira infância.</p>
-          <div class="mt-4 text-sm text-accent font-semibold">
-            <i class="fas fa-heart mr-2"></i>Visitas mensais
-          </div>
-        </div>
-
-    
-        <div class="bg-white rounded-lg shadow-md p-6 project-card card-hover">
-          <div class="text-center mb-4">
-            <i class="fas fa-praying-hands project-icon text-4xl text-primary mb-3"></i>
-            <h3 class="font-heading text-xl text-primary mb-2">Terço dos Homens</h3>
-          </div>
-          <p class="text-gray-600">Homens reunidos em oração, fortalecendo a espiritualidade masculina e a devoção a Nossa Senhora.</p>
-          <div class="mt-4 text-sm text-accent font-semibold">
-            <i class="fas fa-calendar-check mr-2"></i>Todas as terças-feiras
-          </div>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6 project-card card-hover">
-          <div class="text-center mb-4">
-            <i class="fas fa-music project-icon text-4xl text-primary mb-3"></i>
-            <h3 class="font-heading text-xl text-primary mb-2">Projeto da Música</h3>
-          </div>
-          <p class="text-gray-600">Ministério de música que anima as celebrações e forma músicos para servir à comunidade.</p>
-          <div class="mt-4 text-sm text-accent font-semibold">
-            <i class="fas fa-microphone-alt mr-2"></i>Ensaio semanal
-          </div>
-        </div>
-
-      
-        <div class="bg-white rounded-lg shadow-md p-6 project-card card-hover">
-          <div class="text-center mb-4">
-            <i class="fas fa-hands-helping project-icon text-4xl text-primary mb-3"></i>
-            <h3 class="font-heading text-xl text-primary mb-2">Assistência Social</h3>
-          </div>
-          <p class="text-gray-600">Ações solidárias que atendem famílias em situação de vulnerabilidade com alimentos, roupas e apoio.</p>
-          <div class="mt-4 text-sm text-accent font-semibold">
-            <i class="fas fa-gift mr-2"></i>Doações e campanhas
+      <div class="bg-white rounded-xl shadow-md p-8 mb-12">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/2">
+            <h3 class="font-heading text-2xl text-primary mb-4">Visita realizada pelo 3º ano do E.M do SESI-SENAI de Jaraguá do Sul.</h3>
+           </div>
+          <div class="md:w-1/2">
+            <div class="image-container rounded-lg">
+              <img src="/imgs/img-igreja-dois.jpeg" alt="Igreja Principal">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="max-w-3xl mx-auto mt-16 bg-white rounded-lg shadow-md p-8 text-center">
-        <h3 class="font-heading text-2xl text-primary mb-4">Participe dos nossos projetos</h3>
-        <p class="text-gray-700 mb-6">Temos um lugar para você servir e crescer na fé. Venha fazer parte de nossa comunidade!</p>
+      <h3 class="font-heading text-2xl text-primary mb-6 text-center">Momentos Memoráveis</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-image">
+          <div class="image-container">
+            <img src="/imgs/img-igreja-dois.jpeg" alt="Igreja">
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-image">
+          <div class="image-container">
+            <img src="/imgs/registro.jpeg" alt="Igreja">
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg overflow-hidden shadow-md gallery-image">
+          <div class="image-container">
+            <img src="/imgs/registro02.jpeg" alt="Igreja">
+          </div>
+        </div>
+
+       
+        
+
+      <div class="bg-primary text-white rounded-xl shadow-md p-8 mb-12">
+        <h3 class="font-heading text-2xl text-center mb-8">O que foi falado da visita</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-accent bg-opacity-20 p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary mr-4">
+                <i class="fas fa-user"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">Maria</h4>
+              </div>
+            </div>
+            <p class="italic">"A visita foi bem legal, e achei muito interessante aprender mais sobre a história do lugar."</p>
+          </div>
+          
+          <div class="bg-accent bg-opacity-20 p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary mr-4">
+                <i class="fas fa-user"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold">João</h4>
+              </div>
+            </div>
+            <p class="italic">"Eu gostei bastante, o lugar é muito bonito e as pessoas foram muito legais."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8 text-center">
+        <h3 class="font-heading text-2xl text-primary mb-4">Venha você também fazer uma visita!</h3>
+        <p class="text-gray-700 mb-6">Temos um lugar para você!</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="../index.html" class="bg-primary hover:bg-accent text-white font-semibold py-2 px-6 rounded transition-colors">
             Entre em contato
@@ -168,7 +163,6 @@
       </div>
     </div>
   </main>
-
 
   <footer class="bg-secondary text-white py-8 px-4">
     <div class="container mx-auto">
@@ -193,6 +187,9 @@
             </a>
             <a href="projetos.html" class="text-white hover:text-accent transition-colors">
               Projetos
+            </a>
+            <a href="nossa_visita.html" class="text-accent font-semibold underline">
+              Nossa Visita
             </a>
           </div>
         </div>
